@@ -13,6 +13,7 @@ public class oops1 {
         ss1000.milage();
     }
 }
+// classes is stored in meta space
 class bike {
     String name;
     String psPower;    
