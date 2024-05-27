@@ -5,8 +5,13 @@ public class Person {
     private int height;
     private String name;
 
+
+    boolean checkAge = false;
+
     public void setAge(int age){
-        this.age = age;
+        if(checkAge == true){
+            this.age = age;
+        }
     }
     public void setHeigth(int height){
         this.height = height;
