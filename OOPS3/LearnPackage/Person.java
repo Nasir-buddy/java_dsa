@@ -10,7 +10,9 @@ public class Person {
 
     public void setAge(int age){
         if(checkAge == true){
-            this.age = age;
+            if(age < 0){
+                this.age = age;
+            }
         }
     }
     public void setHeigth(int height){
