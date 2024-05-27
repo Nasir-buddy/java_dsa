@@ -1,7 +1,17 @@
 package OOPS3.LearnPackage;
 
 public class Person {
-    int age;
-    int height;
-    String name;
+    private int age;
+    private int height;
+    private String name;
+
+    public void setAge(int age){
+        this.age = age;
+    }
+    public void setHeigth(int height){
+        this.height = height;
+    }
+    public int getAge(){
+        return age;
+    }
 }
