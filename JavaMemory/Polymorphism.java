@@ -5,6 +5,11 @@ class Data{
     public void printData(){
         System.out.println(data);
     }
+    public void printData(int times){
+        for(int i = 0; i < times; i++){
+            System.out.println(data);
+        }
+    }
 }
 class ChildData extends Data{
     public void printData(){
@@ -13,8 +18,12 @@ class ChildData extends Data{
 }
 public class Polymorphism {
     public static void main(String[] args) {
+        // this is run time polymorphism
         Data d = new Data();
         d = new ChildData();
-        d.printData();
+        d.printData(); // Run time polymorphism also called method overloading
+
+        Data d2 = new Data();
+        d2.printData(2); // compile time polymorphism also called method overloading
     }
 }
