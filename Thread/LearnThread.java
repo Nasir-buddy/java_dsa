@@ -13,17 +13,26 @@ public class LearnThread {
     }
 }
 class MyThread1 implements Runnable {
+    @Override
     public void run(){
-        for(int i = 0; i < 1000; i++){
-            System.out.println("I am a thread 1");
+        int i = 0; 
+        while(i < 100){
+            if(i % 2 == 0){
+                System.out.println("Even thread is running" + i);
+            }
+            i++;
         }
     }
 }
 class MyThread2 implements Runnable {
+    @Override
     public void run(){
-        for(int i = 0; i < 1000; i++){
-        System.out.println("i am a thread 2");
-
+        int i = 0; 
+        while(i < 100){
+            if(i % 2 != 0){
+                System.out.println("Odd thread is running. " + i);
+            }
+            i++;
         }
     }
 }
