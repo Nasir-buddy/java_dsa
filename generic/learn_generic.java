@@ -2,18 +2,21 @@ package generic;
 
 public class learn_generic {
     public static void main(String[] args) {
-        Animal<String> a1 = new Animal<>("Dog");
-        Animal<Integer> a2 = new Animal<>(34);
-        System.out.println(a1.getID());
+        Animal<String, Integer> a1 = new Animal<>("Dog", 34);
+        Animal<Integer, String> a2 = new Animal<>(34, "Adarsh");
+        System.out.println(a1.getName());
+       
     }
 }
-class Animal<G>{
+class Animal<G, E>{
     G name;
+    E id;
 
-    public Animal(G name){
-        this.name = name;       
+    public Animal(G name, E id){
+        this.name = name; 
+        this.id = id;      
     }
-    G getID(){
+    G getName(){
         return name;
     }
 }
