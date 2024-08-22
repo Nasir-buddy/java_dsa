@@ -21,6 +21,14 @@ public class TwoSum {
         int r = arr.length - 1; 
         List<List<Integer>> ans = new ArrayList<>();
         while(l < r){
+            if(l > 0 && arr[l] == arr[l - 1]){
+                l++;
+                continue;
+            }
+            if(r < arr.length - 1 && arr[r] == arr[r + 1]){
+                r--;
+                continue;
+            }
             if(arr[l] + arr[r] > k){
                 r--;
             } else if(arr[l] + arr[r] < k){
