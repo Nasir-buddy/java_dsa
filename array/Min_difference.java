@@ -15,22 +15,22 @@ public class Min_difference {
     }
 
     public static List<List<Integer>> find_difference(int arr[]) {
-        List<List<Integer>> ansList = new ArrayList<>();
+        List<List<Integer>> mainans = new ArrayList<>();
         Arrays.sort(arr);
         int min_diff = Integer.MAX_VALUE;
-        for(int i = 1; i < arr.length; i++) {
+        for(int i = 1; i < arr.length; i++){
             min_diff = Math.min(min_diff, arr[i] - arr[i - 1]);
         }
 
-        for(int i = 1; i < arr.length; i++) {
-            if(min_diff == arr[i] - arr[i - 1]) {
+        for(int i = 1; i < arr.length; i++){
+            if(min_diff == arr[i] - arr[i - 1]){
                 List<Integer> temp = new ArrayList<>();
                 temp.add(arr[i - 1]);
                 temp.add(arr[i]);
-                ansList.add(temp);
+                mainans.add(temp);
             }
         }
-        return ansList;
+        return mainans;
     }
 
     public static void main(String[] args) {
